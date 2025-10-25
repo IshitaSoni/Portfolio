@@ -1,0 +1,51 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+/* dotted  background like figjam */
+    background-color: #f8f9fa;
+    background-image: radial-gradient(circle, #d0d0d0 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+h1{
+    font-family: 'Kalam';
+    font-weight: 400;
+    font-size: 3rem;
+    margin: 0;
+}
+.name{
+    text-decoration: underline;
+}
+h2{
+    font-family:'Inter';
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0.5;
+}
+p{
+    font-family: 'Kameron';
+}
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+.heroine{
+    width: 300px;
+}
+.thumbnails {
+    width: 300px;
+    height: 165px;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 4px whitesmoke ;
+}
+.pics-wrap{
+    display: flex;
+    gap: 1.5rem;
+    
+}
