@@ -1,51 +1,120 @@
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* --- Body and Background --- */
+body {
     margin: 0;
-/* dotted  background like figjam */
+    padding: 40px 20px; /* Lets the page scroll */
+
+    /* Your dotted background */
     background-color: #f8f9fa;
     background-image: radial-gradient(circle, #d0d0d0 1px, transparent 1px);
     background-size: 20px 20px;
 }
-h1{
+
+/* --- Font Styles (from your file) --- */
+h1 {
     font-family: 'Kalam';
     font-weight: 400;
     font-size: 3rem;
     margin: 0;
 }
-.name{
-    text-decoration: underline;
-}
-h2{
-    font-family:'Inter';
+h2 {
+    font-family: 'Kalam';
     font-weight: 400;
-    font-size: 2rem;
-    margin: 0.5;
+    font-size: 3rem; /* Made this match h1 for "My Projects" */
+    margin-bottom: 50px; /* Added space below title */
+    text-align: center; /* Center "My Projects" */
 }
-p{
+.hero p {
     font-family: 'Kameron';
+    font-size: 1.2rem;
+    margin: 0;
+    line-height: 1.5;
 }
-.hero{
+.text-w-logo {
+    font-family: 'Kameron';
+    font-size: 1.2rem; /* Made this a bit bigger */
+    font-weight: 600;
+    margin: 0; /* Remove default <p> margin */
+}
+
+/* --- Hero Section (from your file) --- */
+.hero {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 100px; /* More space before projects */
+    max-width: 1000px; /* Added max-width */
+    margin-left: auto;
+    margin-right: auto;
 }
-.heroine{
-    width: 300px;
-}
-.thumbnails {
-    width: 300px;
-    height: 165px;
-    border-radius: 1rem;
-    box-shadow: 0px 0px 4px whitesmoke ;
-}
-.pics-wrap{
+.hero-text {
     display: flex;
-    gap: 1.5rem;
-    
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    max-width: 400px;
+}
+.heroine {
+    width: 300px;
+}
+
+/* --- Project Grid Container --- */
+.pics-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 60px; 
+
+    /* Center the whole grid */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Project Card --- */
+.thumbnails {
+    /* This adds the card look */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+
+    /* This is for the tilt and hover effects */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Your image (with the built-in tape) */
+.thumbnails img {
+    width: 100%; /* Make image fill the card */
+    display: block; /* Remove extra space below image */
+    border-radius: 8px 8px 0 0; /* Match card corners */
+}
+
+.name-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pushes text and arrow apart */
+    padding: 15px 20px; /* Adds breathing room */
+}
+
+/* Your arrow icon */
+.name-link img {
+    width: 24px;
+    height: 24px;
+}
+
+/* --- The Fun Scrapbook Tilt --- */
+.thumbnails:nth-child(1) {
+    transform: rotate(-3deg);
+}
+.thumbnails:nth-child(2) {
+    transform: rotate(2deg);
+    margin-top: 10px; /*Slight overlap */
+}
+.thumbnails:nth-child(3) {
+    transform: rotate(-1deg);
+}
+
+/* Hover effect */
+.thumbnails:hover {
+    transform: scale(1.05) rotate(0deg); /* Straighten and zoom */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    z-index: 10; /* Bring to front */
 }
