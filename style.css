@@ -78,6 +78,11 @@ h2 {
 
     /* This is for the tilt and hover effects */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Make it work as a link */
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 /* Your image (with the built-in tape) */
