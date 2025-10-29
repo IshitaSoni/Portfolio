@@ -1,14 +1,13 @@
 /* --- Body and Background --- */
 body {
     margin: 0;
-    padding: 40px 20px; /* Lets the page scroll */
+    padding: 40px; /* Lets the page scroll */
 
     /* Your dotted background */
     background-color: #f8f9fa;
     background-image: radial-gradient(circle, #d0d0d0 1px, transparent 1px);
     background-size: 20px 20px;
 }
-
 /* --- Font Styles (from your file) --- */
 h1 {
     font-family: 'Kalam';
@@ -42,7 +41,7 @@ h2 {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin-bottom: 100px; /* More space before projects */
+
     max-width: 1000px; /* Added max-width */
     margin-left: auto;
     margin-right: auto;
@@ -84,6 +83,15 @@ h2 {
     color: inherit;
     display: block;
 }
+/* #preppal{
+    background-color: #C2E5FF;
+}
+#status{
+    background-color: #FFC2EC;
+}
+#stride{
+    background-color: #CDF4D3;
+} */
 
 /* Your image (with the built-in tape) */
 .thumbnails img {
@@ -122,4 +130,102 @@ h2 {
     transform: scale(1.05) rotate(0deg); /* Straighten and zoom */
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
     z-index: 10; /* Bring to front */
+}
+
+/* ======================================= */
+/* Responsive Design (Revised Logic)     */
+/* ======================================= */
+
+/* --- 1. All Tablets (e.g., iPad Pro, Air, Mini) --- */
+/* (Applies from 1200px down to 769px)
+   - Hero stays side-by-side but gets smaller.
+   - Projects snap to 2 columns.
+*/
+@media (max-width: 950px) {
+    
+    /* --- Tablet Hero --- */
+    .hero {
+        /* Stays side-by-side, but with less gap */
+        gap: 2rem;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    h1 {
+        font-size: 2.75rem; /* Slightly smaller title */
+    }
+    
+    .hero p {
+        font-size: 1.1rem; /* Slightly smaller text */
+    }
+
+    .heroine {
+        width: 280px; /* Slightly smaller image */
+    }
+
+    /* --- Tablet Projects --- */
+    .pics-wrap {
+        /* Snaps to 2-column grid */
+        grid-template-columns: repeat(2, 1fr);
+        
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+/* --- 2. Mobile (iPhone) --- */
+/* (Applies from 768px and down)
+   - Hero STACKS.
+   - Projects snap to 1 column.
+*/
+@media (max-width: 760px) {
+
+    /* --- Mobile Hero --- */
+    .hero {
+        /* This is the key: stacks text and image vertically */
+        flex-direction: column;
+        
+        gap: 1.5rem;
+        margin-bottom: 60px;
+        padding-left: 20px; /* Keep padding */
+        padding-right: 20px;
+    }
+
+    .hero-text {
+        /* This centers your text elements */
+        align-items: center;
+        text-align: center;
+        max-width: 100%; /* Lets it use the full width */
+    }
+
+    h1 {
+        /* Makes your main title a bit smaller on phones */
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .heroine {
+        /* Make your image a bit smaller so it fits nicely */
+        width: 250px;
+    }
+
+    /* --- Mobile Projects --- */
+    .projects h2 {
+        font-size: 2.5rem; /* Smaller "My Projects" title */
+    }
+
+    .pics-wrap {
+        /* This is the final snap to 1 column */
+        grid-template-columns: 1fr;
+    }
+    
+    /* Optional: remove the tilt on mobile */
+    .thumbnails:nth-child(n) { 
+        transform: rotate(0deg);
+        margin-top: 0;
+    }
 }
