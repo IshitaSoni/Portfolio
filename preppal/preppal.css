@@ -1,0 +1,317 @@
+/* ======================================= */
+/* Project Page General Styles           */
+/* ======================================= */
+body {
+    /* This assumes your dotted background is on the body */
+    background-color: #f8f9fa;
+    background-image: radial-gradient(circle, #d0d0d0 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.project-content {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Reusable handwritten title class */
+.handwritten-title {
+    font-family: 'Kalam', cursive;
+    font-size: 3rem;
+    text-align: center;
+    color: #333;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+/* ======================================= */
+/* 1. Back Navigation                    */
+/* ======================================= */
+.project-nav {
+    margin-bottom: 30px;
+}
+.project-nav a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #555;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+.project-nav a:hover {
+    color: #000;
+}
+
+/* ======================================= */
+/* 2. Project Header                     */
+/* ======================================= */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+.header-text {
+    flex: 1;
+}
+.header-text h1 {
+    font-family: 'Kameron', serif;
+    font-size: 4rem;
+    margin: 0;
+}
+.header-text .subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #666;
+    margin: 10px 0 20px 0;
+}
+.header-text p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+}
+.header-image {
+    flex: 1;
+}
+.header-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* ======================================= */
+/* 3. The Problem                        */
+/* (Styles are now included in this file) */
+/* ======================================= */
+.problem-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.problem-card {
+    display: flex; 
+    background-color: #0b1a4d; /* Dark blue */
+    border-radius: 12px;
+    overflow: hidden; /* This makes the image corners match */
+    max-width: 1000px; 
+    margin: 0 auto; /* Centers the card */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.problem-text {
+    flex: 1; /* Takes up 50% */
+    padding: 0 2.5rem; /* No vertical padding, horizontal padding only */
+    box-sizing: border-box;
+    
+    /* This vertically centers the text-box */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-box {
+    border: 2px dashed #93c5fd; /* Light blue dashed border */
+    border-radius: 8px;
+    padding: 25px;
+    color: #ffffff; 
+}
+
+.text-box h2 {
+    font-family: 'Kameron', serif;
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 400; /* "Information" */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.text-box h2 strong {
+    font-weight: 700; /* "Overload" */
+}
+
+.text-box p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.problem-image {
+    flex: 1; /* Takes up 50% */
+}
+
+.problem-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fills the container */
+    display: block; /* Removes bottom space */
+    min-width: 0;
+}
+
+
+/* ======================================= */
+/* 4. User Personas                      */
+/* ======================================= */
+.personas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.persona-card {
+    border-radius: 8px;
+    padding: 25px 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    font-family: 'Inter', sans-serif;
+}
+.persona-title {
+    font-family: 'Kameron', serif;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.persona-card p {
+    line-height: 1.6;
+}
+.persona-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.persona-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+/* Sticky Note Colors */
+.card-pink { background-color: #FFC2EC; }
+.card-blue { background-color: #C2E5FF; }
+.card-green { background-color: #CDF4D3; }
+
+/* ======================================= */
+/* 5. The Solution                       */
+/* ======================================= */
+.solution-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ======================================= */
+/* 6. Features Diagram                   */
+/* ======================================= */
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.features-grid img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.features-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* ======================================= */
+/* 7. Conclusion                         */
+/* ======================================= */
+.conclusion-section {
+    text-align: center;
+    margin: 80px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* ======================================= */
+/* 8. Other Projects                     */
+/* ======================================= */
+/* This section will reuse the ".pics-wrap"
+   and ".thumbnails" styles from your main 'style.css'.
+   If you want this page to be 100% standalone,
+   we would need to copy those styles here too.
+*/
+.other-projects .pics-wrap {
+    /* Assuming pics-wrap is from your main CSS */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 60px;
+}
+.other-projects .thumbnails {
+    /* Assuming thumbnails is from your main CSS */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: rotate(1deg); /* Just a slight default tilt */
+}
+.other-projects .thumbnails:nth-child(even) {
+    transform: rotate(-1deg); /* Alternate the tilt */
+}
+.other-projects .thumbnails:hover {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+}
+.other-projects .thumbnails img {
+    width: 100%;
+    display: block;
+    border-radius: 8px 8px 0 0;
+}
+.other-projects .name-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+.other-projects .text-w-logo {
+    font-family: 'Kameron', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+
+/* ======================================= */
+/* Responsive Media Queries              */
+/* ======================================= */
+@media (max-width: 768px) {
+    .handwritten-title {
+        font-size: 2.5rem;
+    }
+    
+    .project-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-text h1 {
+        font-size: 3rem;
+    }
+    
+    /* Stack the problem card on mobile */
+    .problem-card {
+        flex-direction: column;
+    }
+    .problem-text {
+        padding: 30px 20px; /* Add vertical padding back on mobile */
+    }
+    .text-box h2 {
+        font-size: 2rem; /* Smaller title on mobile */
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr; /* Stack on mobile */
+    }
+}
