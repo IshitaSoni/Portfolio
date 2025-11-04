@@ -154,6 +154,9 @@ h2 {
     .heroine {
         width: 280px; /* Slightly smaller image */
     }
+    .heroine:hover {
+    transform: rotate(2deg); /* Straightens and grows */
+}
 
     /* --- Tablet Projects --- */
     .pics-wrap {
