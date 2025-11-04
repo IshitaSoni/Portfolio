@@ -214,19 +214,123 @@ body {
 /* ======================================= */
 /* 6. Features Diagram                   */
 /* ======================================= */
-.features-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+/* ======================================= */
+/* 6. Features Diagram                   */
+/* ======================================= */
+
+/* This is the main container that holds the mind map */
+.features-diagram {
+    position: relative; /* This is essential! */
+    width: 100%;
+    max-width: 1100px;
+    margin: 80px auto;
+    
+    /* Sets the height of the container so cards fit */
+    height: 1000px; 
+    
+    /* * This is the KEY:
+     * It places your 'feature-lines.png' in the background.
+     */
+    background-image: url('/preppal/assets/red-lines.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
 }
-.features-grid img {
+
+/* This is the style for EACH screenshot card */
+.feature-card {
+    position: absolute; /* This lets us place it anywhere */
+    width: 45%; /* Each card is 45% of the container's width */
+    
+    /* Adds the cool 3D tilt effect */
+    transform: perspective(1000px) rotateX(10deg) rotateY(-8deg);
+    
+    border-radius: 8px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.05);
+    z-index: 10;
+}
+
+.feature-card .screenshot {
     width: 100%;
     border-radius: 8px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    display: block;
 }
-.features-grid img:hover {
-    transform: scale(1.03);
+
+/* This places the red pin on each card */
+.pin-icon {
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    width: 30px;
+    z-index: 2;
+}
+
+
+/* * These IDs are used to place each card in its
+ * specific spot. We use percentages so it's
+ * somewhat responsive.
+ */
+
+#card-dash {
+    top: 0;
+    left: 5%;
+    transform: perspective(1000px) rotateX(5deg) rotateY(-3deg);
+}
+
+#card-gen-left {
+    top: 35%;
+    left: 0;
+}
+
+#card-gen-right {
+    top: 15%;
+    right: 5%;
+}
+
+#card-module {
+    top: 55%;
+    right: 0;
+}
+
+#card-course {
+    top: 75%;
+    left: 10%;
+    transform: perspective(1000px) rotateX(10deg) rotateY(5deg);
+}
+
+
+/* --- Responsive (Mobile) --- */
+@media (max-width: 768px) {
+    /*
+     * On mobile, this complex layout is hard.
+     * We'll just stack them vertically.
+     */
+    .features-diagram {
+        height: auto; /* Let it grow */
+        background-image: none; /* Hide the lines */
+        
+        /* This turns off absolute positioning */
+        position: static; 
+    }
+    
+    .feature-card {
+        position: static; /* Stack them */
+        width: 90%;
+        margin: 0 auto 30px auto;
+        
+        /* Reset transform on mobile */
+        transform: none;
+    }
+
+    /* We hide the pins on mobile */
+    .pin-icon {
+        display: none;
+    }
 }
 
 /* ======================================= */
