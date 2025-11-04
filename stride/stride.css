@@ -1,0 +1,221 @@
+/* ======================================= */
+/* Project Page General Styles           */
+/* ======================================= */
+body {
+    background-color: #f8f9fa;
+    background-image: radial-gradient(circle, #d0d0d0 1px, transparent 1px);
+    background-size: 20px 20px;
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+.project-content {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Reusable handwritten title (centered) */
+.handwritten-title {
+    font-family: 'Kalam', cursive;
+    font-size: 3rem;
+    text-align: center;
+    color: #333;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+/* Specific handwritten title (left-aligned) */
+.handwritten-title-left {
+    font-family: 'Kalam', cursive;
+    font-size: 2.5rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* ======================================= */
+/* 1. Back Navigation                    */
+/* ======================================= */
+.project-nav {
+    margin-bottom: 30px;
+}
+.project-nav a {
+    font-weight: 600;
+    color: #555;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+.project-nav a:hover {
+    color: #000;
+}
+
+/* ======================================= */
+/* 2. Project Header (Simple)            */
+/* ======================================= */
+.project-header-simple {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.project-header-simple h1 {
+    font-family: 'Kalam', cursive;
+    font-size: 4rem;
+    margin: 0;
+}
+.project-header-simple .subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #666;
+    margin: 10px 0 0 0;
+}
+
+.project-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+}
+
+/* ======================================= */
+/* 3. Main Content (2-Column)            */
+/* ======================================= */
+.stride-main-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start; /* Aligns top */
+}
+
+.project-details {
+    flex: 1; /* Takes up 1 part */
+    position: sticky; /* Makes it "stick" as you scroll */
+    top: 40px;
+}
+
+.project-details ul {
+    list-style-type: '✓ '; /* Custom checkmark bullet */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    padding-left: 25px;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+.project-link:hover {
+    background-color: #eee;
+}
+
+.thanks-text {
+    font-family: 'Kalam', cursive;
+    font-size: 1.8rem;
+    margin-top: 40px;
+    color: #555;
+}
+
+.project-image-large {
+    flex: 2; /* Takes up 2 parts (wider) */
+}
+.project-image-large img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+}
+
+/* ======================================= */
+/* 4. Other Projects (Footer)            */
+/* ======================================= */
+.other-projects .pics-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 60px;
+}
+.other-projects .thumbnails {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: rotate(1deg); /* Default tilt */
+}
+.other-projects .thumbnails:nth-child(even) {
+    transform: rotate(-1deg); /* Alternate the tilt */
+}
+.other-projects .thumbnails:hover {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    z-index: 10;
+}
+.other-projects .thumbnails img {
+    width: 100%;
+    display: block;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid #eee;
+}
+.other-projects .name-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+.other-projects .text-w-logo {
+    font-family: 'Kameron', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ======================================= */
+/* Responsive Media Queries              */
+/* ======================================= */
+@media (max-width: 768px) {
+    .handwritten-title,
+    .handwritten-title-left {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    
+    .project-header-simple h1 {
+        font-size: 3rem;
+    }
+
+    .stride-main-content {
+        flex-direction: column; /* Stack on mobile */
+    }
+
+    .project-details {
+        position: static; /* Un-stick it on mobile */
+        order: 2; /* Show text *after* image */
+        text-align: center;
+    }
+    
+    .project-link {
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .project-image-large {
+        order: 1; /* Show image *before* text */
+    }
+}
