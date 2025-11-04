@@ -250,6 +250,36 @@ ul {
 }
 
 /* ======================================= */
+/* Figma Prototype Embed Styles          */
+/* ======================================= */
+.figma-embed-wrapper {
+    position: relative;
+    width: 100%;
+    
+    /* This sets the 16:9 aspect ratio */
+    padding-bottom: 56.25%; 
+    
+    /* This is a fallback for older browsers */
+    /* aspect-ratio: 16 / 9; */
+    
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px; /* Matches your site's style */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    margin-top: 30px;
+}
+
+.figma-embed-wrapper iframe {
+    /* This makes the iframe fill the wrapper */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove Figma's default border */
+}
+
+/* ======================================= */
 /* Responsive Media Queries              */
 /* ======================================= */
 @media (max-width: 768px) {
