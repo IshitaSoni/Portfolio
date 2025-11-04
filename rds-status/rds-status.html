@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Kalam:wght@400;700&family=Kameron:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
@@ -39,34 +39,32 @@
 
             <h3>Defining the Problem Area:</h3>
             <div class="flowchart-wrapper">
+                <pre class="mermaid">
+                    graph LR
+                        A[Status]:::blue
+                        A --> B[Tasks]:::blue
+                        A --> C[Issues]:::blue
+                        A --> D[Mine]:::blue
+                        A --> E[Open PRs]:::blue
+                        A --> F[Stale PRs]:::blue
+                        A --> G[Idle Users]:::blue
 
-    <pre class="mermaid">
-        graph LR
-            A[Status]:::blue
-            A --> B[Tasks]:::blue
-            A --> C[Issues]:::blue
-            A --> D[Mine]:::blue
-            A --> E[Open PRs]:::blue
-            A --> F[Stale PRs]:::blue
-            A --> G[Idle Users]:::blue
+                        classDef blue fill:#C2E5FF,stroke:#3DADFF,stroke-width:2px,color:#333,font-family:'Inter';
+                </pre>
 
-            classDef blue fill:#C2E5FF,stroke:#3DADFF,stroke-width:2px,color:#333,font-family:'Inter';
-    </pre>
+                <pre class="mermaid">
+                    graph LR
+                        H[Profile Dropdown]:::teal
+                        H --> I[Home]:::teal
+                        H --> J["Status (Idle/ OOO)"]:::teal
+                        H --> K[Profile]:::teal
+                        H --> L[Tasks]:::teal
+                        H --> M[Identity]:::teal
+                        H --> N[SignOut]:::teal
 
-    <pre class="mermaid">
-        graph LR
-            H[Profile Dropdown]:::teal
-            H --> I[Home]:::teal
-            H --> J["Status (Idle/ OOO)"]:::teal
-            H --> K[Profile]:::teal
-            H --> L[Tasks]:::teal
-            H --> M[Identity]:::teal
-            H --> N[SignOut]:::teal
-
-            classDef teal fill:#C6FAF6,stroke:#5AD8CC,stroke-width:2px,color:#333,font-family:'Inter';
-    </pre>
-    
-</div>
+                        classDef teal fill:#C6FAF6,stroke:#5AD8CC,stroke-width:2px,color:#333,font-family:'Inter';
+                </pre>
+            </div>
         </section>
 
         <section class="solution-section">
@@ -98,26 +96,28 @@
         
         <section class="flow-section">
             <h2 class="handwritten-title">Final Flow</h2>
-            <pre class="mermaid">
-                graph LR
-                    A[Status]:::blue
-                    A --> B[All Tasks]:::blue
-                    A --> C[My Tasks]:::blue
-                    A --> D[Issues]:::blue
-                    A --> E[Open PRs]:::blue
-                    A --> F[Stale PRs]:::blue
-                    A --> G[Idle Users]:::blue
+            <div class="flowchart-wrapper">
+                <pre class="mermaid">
+                    graph LR
+                        A[Status]:::blue
+                        A --> B[All Tasks]:::blue
+                        A --> C[My Tasks]:::blue
+                        A --> D[Issues]:::blue
+                        A --> E[Open PRs]:::blue
+                        A --> F[Stale PRs]:::blue
+                        A --> G[Idle Users]:::blue
 
-                    classDef blue fill:#C2E5FF,stroke:#3DADFF,stroke-width:2px,color:#333,font-family:'Inter';
-            </pre>
+                        classDef blue fill:#C2E5FF,stroke:#3DADFF,stroke-width:2px,color:#333,font-family:'Inter';
+                </pre>
 
-            <pre class="mermaid">
-                graph LR
-                    H[Profile Dropdown]:::teal
-                    H --> I[Profile]:::teal
+                <pre class="mermaid">
+                    graph LR
+                        H[Profile Dropdown]:::teal
+                        H --> I[Profile]:::teal
 
-                    classDef teal fill:#C6FAF6,stroke:#5AD8CC,stroke-width:2px,color:#333,font-family:'Inter';
-            </pre>
+                        classDef teal fill:#C6FAF6,stroke:#5AD8CC,stroke-width:2px,color:#333,font-family:'Inter';
+                </pre>
+            </div>
         </section>
         
         <section class="comparison-section">
@@ -174,4 +174,26 @@
     </script>
 
 </body>
+    <footer>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/ishita-soni-work/" target="_blank" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://www.figma.com/design/GFS9O08yv2aetF13kT9pP2/Ishita-Portfolio?node-id=0-1&t=7fRnaHFwAGK1t9i7-1" target="_blank" aria-label="Figma">
+            <i class="fa-brands fa-figma"></i>
+        </a>
+        <a href="https://github.com/IshitaSoni" target="_blank" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://x.com/Ishita577" target="_blank" aria-label="X / Twitter">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+    </div>
+
+    <div class="contact-email">
+        <a href="mailto:ishitasoni577@gmail.com">ishitasoni577@gmail.com</a>
+    </div>
+
+    <p class="copyright">&copy; 2025 Ishita Soni. All rights reserved.</p>
+</footer>
 </html>
