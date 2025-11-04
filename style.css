@@ -123,6 +123,8 @@ h2 {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
     z-index: 10; /* Bring to front */
 }
+        .heroine:hover {
+        transform: rotate(2deg);
 
 /* ======================================= */
 /* Responsive Design (Revised Logic)     */
@@ -152,10 +154,8 @@ h2 {
     }
 
     .heroine {
-        width: 280px; /* Slightly smaller image */
+        width: 280px; 
     }
-    .heroine:hover {
-    transform: rotate(2deg); /* Straightens and grows */
 }
 
     /* --- Tablet Projects --- */
