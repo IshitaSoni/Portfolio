@@ -76,12 +76,19 @@ body {
     line-height: 1.6;
     color: #444;
 }
-.header-text a {
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
     text-decoration: none;
-}
-.header-text a :hover {
-    text-decoration: none;
-    color:#0b1a4d;
+    margin-top: 20px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
 }
 .header-image {
     flex: 1;
