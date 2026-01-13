@@ -18,9 +18,9 @@ h1 {
 h2 {
     font-family: 'Kalam';
     font-weight: 400;
-    font-size: 3rem; /* Made this match h1 for "My Projects" */
-    margin-bottom: 50px; /* Added space below title */
-    text-align: center; /* Center "My Projects" */
+    font-size: 3rem;
+    margin-bottom: 50px;
+    text-align: center;
 }
 .hero p {
     font-family: 'Kameron';
@@ -30,9 +30,9 @@ h2 {
 }
 .text-w-logo {
     font-family: 'Kameron';
-    font-size: 1.2rem; /* Made this a bit bigger */
+    font-size: 1.2rem;
     font-weight: 600;
-    margin: 0; /* Remove default <p> margin */
+    margin: 0;
 }
 
 /* --- Hero Section (from your file) --- */

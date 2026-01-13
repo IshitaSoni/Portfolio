@@ -1,0 +1,104 @@
+/* Layout container */
+.project-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Simple nav styling */
+.project-nav a{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Header layout */
+.header{
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.header-text{
+    flex: 1 1 360px;
+    min-width: 260px;
+}
+
+.before-after{
+    flex: 0 0 360px;
+}
+
+.comparision-home{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: slategray;
+    width: auto;
+    padding: 1rem;
+    border-radius: 1.25rem;
+}
+
+.comparision-home span{
+    margin: 0 1rem;
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.comparision-home img{
+    max-width: 160px;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+/* Figma/embed iframe wrapper */
+.iframe-wrap{
+    flex: 1 1 480px;
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.figma-embed{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 10px;
+    display: block;
+}
+
+/* Small screens: stack content vertically */
+@media (max-width: 800px){
+    .header{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .before-after{
+        order: 2;
+        width: 100%;
+    }
+    .iframe-wrap{
+        order: 3;
+    }
+    .comparision-home img{
+        max-width: 140px;
+    }
+}
+
+/* Very small screens: tighten paddings and scale down */
+@media (max-width: 420px){
+    .project-content{ padding: 1rem; }
+    .comparision-home{ padding: 0.6rem; }
+    .comparision-home img{ max-width: 120px; }
+}
+
+/* Accessibility: ensure images scale well */
+img{ max-width: 100%; height: auto; }
