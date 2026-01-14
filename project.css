@@ -1,14 +1,6 @@
 /* Project page specific styles */
 .project-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1.5rem 2rem;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(8px);
-    z-index: 100;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
 .back-link {
