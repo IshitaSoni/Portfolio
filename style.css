@@ -84,12 +84,16 @@ h2 {
     display: block;
 }
 
-
-/* Your image (with the built-in tape) */
 .thumbnails img {
     width: 100%; /* Make image fill the card */
     display: block; /* Remove extra space below image */
     border-radius: 8px 8px 0 0; /* Match card corners */
+}
+
+/* MrMed thumbnail height constraint */
+#mrmed img {
+    height: 300px;
+    object-fit: contain;
 }
 
 .name-link {

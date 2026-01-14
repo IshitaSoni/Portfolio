@@ -25,11 +25,6 @@
     flex-wrap: wrap;
 }
 
-.header-text{
-    flex: 1 1 360px;
-    min-width: 260px;
-}
-
 .before-after{
     flex: 0 0 360px;
 }
@@ -102,3 +97,22 @@
 
 /* Accessibility: ensure images scale well */
 img{ max-width: 100%; height: auto; }
+
+/* Other Projects Section */
+.other-projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.other-projects .pics-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.other-projects .thumbnails img {
+    height: 280px;
+    object-fit: contain;
+}
